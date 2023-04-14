@@ -1,27 +1,96 @@
-% Generate a sine wave with a frequency of 1 Hz and a duration of 2 seconds
-t = linspace(0, 2*pi, 1000);
-y = sin(t);
-% Plot the sine wave
-plot(t, y);
-title('Sine Wave');
-xlabel('Time (s)');
+%EX_1
+% Define the time range and sampling interval
+t = -10:0.01:10;
+% Define the original continuous-time signal
+x = sin(t);
+% Plot the original continuous-time signal
+plot(t, x);
+xlabel('Time');
 ylabel('Amplitude');
-% Generate a random walk with 1000 steps
-steps = randn(1000, 1);
-walk = cumsum(steps);
-% Plot the random walk
-plot(walk);
-title('Random Walk');
-xlabel('Step');
-ylabel('Position');
-% Generate a grid of x and y values
-x = linspace(-5, 5, 100);
-y = linspace(-5, 5, 100);
-[X, Y] = meshgrid(x, y);
-% Generate a 3D surface plot of the peaks function
-Z = peaks(X, Y);
-surf(X, Y, Z);
-title('Peaks Function');
-xlabel('X');
-ylabel('Y');
-zlabel('Z');
+title('Original Continuous-Time Signal');
+%%%%
+% Define the time range and sampling interval
+t = -10:0.01:10;
+% Define the original continuous-time signal
+x = sin(t);
+% Define the time shift amount
+t_shift = 2;
+% Create the time-shifted signal
+x_shift = sin(t - t_shift);
+% Plot the time-shifted signal
+plot(t, x_shift);
+xlabel('Time');
+ylabel('Amplitude');
+title('Time-Shifted Continuous-Time Signal');
+%%%%%
+% Define the time range and sampling interval
+t = -10:0.01:10;
+% Define the original continuous-time signal
+x = sin(t);
+% Define the scaling factor
+a = 2;
+% Create the scaled signal
+x_scaled = a*sin(t);
+% Plot the scaled signal
+plot(t, x_scaled);
+xlabel('Time');
+ylabel('Amplitude');
+title('Scaled Continuous-Time Signal');
+%%%%%%
+% Define the time range and sampling interval
+t = -10:0.01:10;
+% Define the original continuous-time signal
+x = sin(t);
+% Create the reversed signal
+x_reversed = fliplr(x);
+% Plot the reversed signal
+plot(t, x_reversed);
+xlabel('Time');
+ylabel('Amplitude');
+title('Reversed Continuous-Time Signal');
+%Ex_2
+% Define the original signal
+n = 0:10;
+x = [1 2 3 4 5 6 7 8 9 10 11];
+% Plot the original signal
+stem(n, x)
+title('Original Discrete-Time Signal')
+xlabel('n')
+ylabel('x[n]')
+%%%%
+% Define the original signal
+n = 0:10;
+x = [1 2 3 4 5 6 7 8 9 10 11];
+% Define the time shift
+k = 3;
+% Create the time-shifted signal
+x_shifted = x((1+k):end);
+% Plot the time-shifted signal
+stem(n, x_shifted)
+title('Time-Shifted Discrete-Time Signal')
+xlabel('n')
+ylabel('x[n-k]')
+%%%%
+% Define the original signal
+n = 0:10;
+x = [1 2 3 4 5 6 7 8 9 10 11];
+% Define the scaling factor
+a = 2;
+% Create the scaled signal
+x_scaled = a*x;
+% Plot the scaled signal
+stem(n, x_scaled)
+title('Scaled Discrete-Time Signal')
+xlabel('n')
+ylabel('a*x[n]')
+%%%%%
+% Define the original signal
+n = 0:10;
+x = [1 2 3 4 5 6 7 8 9 10 11];
+% Create the reversed signal
+x_reversed = fliplr(x);
+% Plot the reversed signal
+stem(n, x_reversed)
+title('Reversed Discrete-Time Signal')
+xlabel('n')
+ylabel('x[-n]')
