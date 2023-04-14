@@ -1,6 +1,6 @@
 # Exercises_
 Here is the explanation 
-WEEK 6
+WEEK 4
 Exercise 1
 1)I have  just entered "length" and "units variable " to get the input
 2)wrote the priout function to print the input
