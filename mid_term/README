@@ -1,0 +1,43 @@
+Defines the types of operations that are possible.
+
+This code defines his three types of operations that the user can choose from:
+Move, scale, flip. These operations change the selected signal based on user input.
+
+Defines the types of possible signals.
+
+This code defines his 6 types of signals that the user can choose from.
+Discrete, Continuous, Quadratic, Logarithmic, Sinusoidal, Exponential. These signals are generated based on user input and modified according to the selected operation.
+
+Prompt the user to:
+
+This code prompts the user to select an operation and signal type. Also, the user is prompted to enter the amount of shift/scale/flip. Inputs are stored in variables for later use.
+
+Exception handling for non-numeric input of amounts:
+
+This code checks if the amount entered by the user is numeric. If not, the code throws an error her message and asks the user to enter a number.
+
+Handle exceptions for inputs outside the amount range.
+
+This code checks if the amount entered by the user is within the specified range (-10 to 10). Otherwise, the code throws an error message and prompts the user to enter a value within the specified range.
+
+Generate a signal based on user input.
+
+This code generates a signal based on user input. Depending on the type of signal selected by the user, it uses a specific function to generate the signal.
+
+Perform an action based on user input.
+
+The code performs selected operations on the generated signals based on user input. Depending on the type of action selected by the user, it uses specific functions to perform the action. Plot the modified signal.
+
+Modified signals are displayed in a different color than the original signal. Depending on the waveform type selected by the user, the modified waveform is plotted with a different function than the original waveform.
+
+Set axis labels and titles.
+
+This code sets the graph axis labels and titles based on the user-selected operation and signal type.
+
+Add grid lines.
+
+This code adds gridlines to the chart to make the signals easier to see.
+
+Add legend:
+
+This code adds a legend to the chart to distinguish between original and modified signals. 
